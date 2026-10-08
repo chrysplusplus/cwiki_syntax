@@ -32,8 +32,10 @@ syntax match cwikiLineBreak "<br>$" display contains=@NoSpell
 syntax match cwikiLineBreak "\\$" display
 syntax match cwikiLineBreak " \{2,}$" display
 
-syntax match cwikiUL "\%(\t\| \{0,4}\)[-*+] " display contained
+syntax match cwikiUL "\%(\t\| \{0,4}\)[-*+] " display contained contains=cwikiBullet
 syntax match cwikiOL "\%(\t\| \{0,4}\)\<\d\+.\s\+" display contained
+
+syntax match cwikiBullet "[-*+]" display contained conceal cchar=•
 
 syntax match cwikiLink "\\\@<!\[[^][]*\]([^][()]*)" display contains=cwikiLinkText
 syntax region cwikiLinkText matchgroup=cwikiLink start="\[" end="\]" nextgroup=cwikiLinkURI keepend display contained concealends

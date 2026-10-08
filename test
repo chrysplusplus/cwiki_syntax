@@ -53,8 +53,8 @@ Paragraph with *italic \* text* and more _italic \_ text_ and w*or*d.
 Paragraph with ***important \* text*** and ___even more \_ important text___
 and w***or***d.
 
-**A test to see what happens when bold text is allowed to continue for more than
-one line.**
+**A test to see what happens when bold text is allowed to continue for more
+than one line.**
 
 Paragraph with `code` and `code \`
 across lines`
