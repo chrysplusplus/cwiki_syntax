@@ -86,6 +86,7 @@ highlight default link cwikiCode              PreProc
 highlight default link cwikiLineBreak         NonText
 highlight default link cwikiUL                Identifier
 highlight default link cwikiOL                Identifier
+highlight default link cwikiBullet            Identifier
 highlight default link cwikiDate              PreProc
 
 highlight default cwikiItalic     cterm=italic gui=italic
