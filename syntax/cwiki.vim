@@ -61,38 +61,44 @@ syntax region cwikiYamlHeader matchgroup=cwikiYamlHeader start="\%^---.*$" end="
 syntax match cwikiEscaped "\\[[*_`]" transparent contains=cwikiEscapeDelimiter
 syntax match cwikiEscapeDelimiter "\\" transparent contained conceal
 
-highlight default link cwikiH1                Title
-highlight default link cwikiH2                Title
-highlight default link cwikiH3                Title
-highlight default link cwikiH4                Title
-highlight default link cwikiH5                Title
-highlight default link cwikiH6                Title
-highlight default link cwikiHeadingRule       NonText
-highlight default link cwikiH1Delimiter       cwikiHeadingDelimiter
-highlight default link cwikiH2Delimiter       cwikiHeadingDelimiter
-highlight default link cwikiH3Delimiter       cwikiHeadingDelimiter
-highlight default link cwikiH4Delimiter       cwikiHeadingDelimiter
-highlight default link cwikiH5Delimiter       cwikiHeadingDelimiter
-highlight default link cwikiH6Delimiter       cwikiHeadingDelimiter
-highlight default link cwikiHeadingDelimiter  NonText
-highlight default link cwikiHznRule           Identifier
-highlight default link cwikiHiddenDelimiter   Comment
-highlight default link cwikiYamlHeader        Comment
-highlight default link cwikiLinkText          cwikiLink
-
-highlight default link cwikiCodeBlock         cwikiCode
-highlight default link cwikiCodeDelimiter     cwikiCode
-highlight default link cwikiCode              PreProc
-highlight default link cwikiLineBreak         NonText
-highlight default link cwikiUL                Identifier
-highlight default link cwikiOL                Identifier
-highlight default link cwikiBullet            Identifier
-highlight default link cwikiDate              PreProc
+highlight default link cwikiHeading   Title
+highlight default link cwikiDelimiter NonText
+highlight default link cwikiLayout    Identifier
+highlight default link cwikiHidden    Comment
+highlight default link cwikiCode      PreProc
+highlight default link cwikiDate      PreProc
 
 highlight default cwikiItalic     cterm=italic gui=italic
 highlight default cwikiBold       cterm=bold gui=bold
 highlight default cwikiImportant  cterm=bold,italic gui=bold,italic
 highlight default cwikiLink       cterm=underline gui=underline
+
+highlight default link cwikiH1                cwikiHeading
+highlight default link cwikiH2                cwikiHeading
+highlight default link cwikiH3                cwikiHeading
+highlight default link cwikiH4                cwikiHeading
+highlight default link cwikiH5                cwikiHeading
+highlight default link cwikiH6                cwikiHeading
+highlight default link cwikiHeadingRule       cwikiDelimiter
+highlight default link cwikiHeadingDelimiter  cwikiDelimiter
+highlight default link cwikiHznRule           cwikiLayout
+highlight default link cwikiHiddenDelimiter   cwikiHidden
+highlight default link cwikiYamlHeader        cwikiHidden
+highlight default link cwikiLinkText          cwikiLink
+
+highlight default link cwikiH1Delimiter cwikiHeadingDelimiter
+highlight default link cwikiH2Delimiter cwikiHeadingDelimiter
+highlight default link cwikiH3Delimiter cwikiHeadingDelimiter
+highlight default link cwikiH4Delimiter cwikiHeadingDelimiter
+highlight default link cwikiH5Delimiter cwikiHeadingDelimiter
+highlight default link cwikiH6Delimiter cwikiHeadingDelimiter
+
+highlight default link cwikiCodeBlock     cwikiCode
+highlight default link cwikiCodeDelimiter cwikiCode
+highlight default link cwikiLineBreak     cwikiDelimiter
+highlight default link cwikiUL            cwikiLayout
+highlight default link cwikiOL            cwikiLayout
+highlight default link cwikiBullet        cwikiLayout
 
 let b:current_syntax = "cwiki"
 
